@@ -19,7 +19,7 @@ function GetList(props) {
         <ul className='post-list'>
             
             {studentList.map(post =>(
-                <li>{post.subject_code}  -  {post.subject_desc}
+                <li>{post.subject_code}  -  {post.subject_desc}   <a href={'http://localhost:5000/get-students-by-subject/'+post.subject_code}><button>Link Text</button></a>
                 </li>
                
                 
