@@ -10,16 +10,14 @@ GetList.defaultProps = {
     studentList: [],
 }
 
-function showStudents(){
-    window.location.href="http://url.com"
-}
+
 function GetList(props) {
     const { studentList } = props;
     return (
-        <ul className='post-list'>
+        <ul className='list-group'>
             
             {studentList.map(post =>(
-                <li>{post.subject_code}  -  {post.subject_desc}   <a href={'http://localhost:5000/get-students-by-subject/'+post.subject_code}><button>Link Text</button></a>
+                <li className='list-group-item'>{post.subject_code}  &nbsp;- &nbsp; {post.subject_desc} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href={'http://localhost:5000/get-students-by-subject/'+post.subject_code}><button className='btn btn-secondary btn-sm'>Student List</button></a>
                 </li>
                
                 
