@@ -10,6 +10,7 @@ GetList.defaultProps = {
     studentList: [],
 }
 
+//fetching the unique student list for each subject
 
 function GetList(props) {
     const { studentList } = props;
@@ -22,6 +23,8 @@ function GetList(props) {
         })
 
     }
+
+    //Mapping the unique subject list and diplaying Student IDs as pop-ups
     return (
         <Fragment>
             <ul className='list-group'>
@@ -36,12 +39,13 @@ function GetList(props) {
             ))}
 
         </ul>
+                
 
         <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog" role="document">
     <div className="modal-content">
       <div className="modal-header">
-        <h5 className="List of student IDs" id="exampleModalLabel">Modal title</h5>
+        <h5 className="modal-title" id="exampleModalLabel">List of Student IDs</h5>
         
           
       </div>
